@@ -11,9 +11,9 @@ from scipy.spatial import cKDTree
 
 
 DEFAULTS = (
-    "/Users/4c/Desktop/GHQ/data/loto7_4698_k80.csv",
-    "/Users/4c/Desktop/GHQ/data/loto7_4698_k80_loto_2971.csv",
-    "/Users/4c/Desktop/GHQ/data/loto7_4698_k80_loto_plus_1727.csv",
+    "/data/loto7_4698_k80.csv",
+    "/data/loto7_4698_k80_loto_2971.csv",
+    "/data/loto7_4698_k80_loto_plus_1727.csv",
 )
 
 WINDOW, STARTS = 96, 12
@@ -592,7 +592,7 @@ if __name__ == "__main__":
 
 
 """
-Ulaz: /Users/4c/Desktop/GHQ/data/loto7_4698_k80.csv; redova=4698
+Ulaz: /data/loto7_4698_k80.csv; redova=4698
 Validacija: 16/48
 Validacija: 32/48
 Validacija: 48/48
@@ -609,7 +609,7 @@ Kontrola: samo razmaci: prosek=0.9219; pogodaka 0..7=[23, 25, 14, 2, 0, 0, 0, 0]
 Kontrola: samo Fourierov opis: prosek=1.1250; pogodaka 0..7=[14, 32, 15, 2, 1, 0, 0, 0]
 Kontrola: prethodno izvuceno kolo: prosek=1.2188; pogodaka 0..7=[13, 30, 16, 4, 1, 0, 0, 0]
 Poslednji red: 4,12,18,28,35,36,37
-SLEDECI RED 4699: 26,27,28,29,30,38,39
+SLEDECI RED 4699: 26,x,28,y,30,z,39
 Skor=1.0291947245; iteracija=17; vec postoji u istoriji=False
 Empirijska podrska: L1 poluprecnik=2.800000; kvantil=.75
 Proveren lokalni maksimum dozvoljenih zamena; globalni maksimum nije potvrden.
@@ -617,7 +617,7 @@ Dualni opis je adaptacija ideje; nije Viazovskina interpolaciona formula.
 
 
 
-Ulaz: /Users/4c/Desktop/GHQ/data/loto7_4698_k80_loto_2971.csv; redova=2971
+Ulaz: /data/loto7_4698_k80_loto_2971.csv; redova=2971
 Validacija: 16/48
 Validacija: 32/48
 Validacija: 48/48
@@ -634,7 +634,7 @@ Kontrola: samo razmaci: prosek=1.2188; pogodaka 0..7=[16, 25, 16, 7, 0, 0, 0, 0]
 Kontrola: samo Fourierov opis: prosek=1.2656; pogodaka 0..7=[15, 23, 20, 6, 0, 0, 0, 0]
 Kontrola: prethodno izvuceno kolo: prosek=1.2969; pogodaka 0..7=[11, 30, 16, 7, 0, 0, 0, 0]
 Poslednji red: 18,20,21,24,29,34,38
-SLEDECI RED 2972: 1,3,4,5,10,11,39
+SLEDECI RED 2972: 1,x,4,y,10,z,39
 Skor=0.9967613358; iteracija=21; vec postoji u istoriji=False
 Empirijska podrska: L1 poluprecnik=2.800000; kvantil=.75
 Proveren lokalni maksimum dozvoljenih zamena; globalni maksimum nije potvrden.
@@ -642,7 +642,7 @@ Dualni opis je adaptacija ideje; nije Viazovskina interpolaciona formula.
 
 
 
-Ulaz: /Users/4c/Desktop/GHQ/data/loto7_4698_k80_loto_plus_1727.csv; redova=1727
+Ulaz: /data/loto7_4698_k80_loto_plus_1727.csv; redova=1727
 Validacija: 16/48
 Validacija: 32/48
 Validacija: 48/48
@@ -659,7 +659,7 @@ Kontrola: samo razmaci: prosek=1.3125; pogodaka 0..7=[10, 27, 24, 3, 0, 0, 0, 0]
 Kontrola: samo Fourierov opis: prosek=1.3594; pogodaka 0..7=[13, 22, 23, 5, 1, 0, 0, 0]
 Kontrola: prethodno izvuceno kolo: prosek=1.2969; pogodaka 0..7=[15, 23, 18, 8, 0, 0, 0, 0]
 Poslednji red: 4,12,18,28,35,36,37
-SLEDECI RED 1728: 21,22,23,24,25,36,37
+SLEDECI RED 1728: 21,x,23,y,25,z,37
 Skor=1.8539827616; iteracija=20; vec postoji u istoriji=False
 Empirijska podrska: L1 poluprecnik=3.200000; kvantil=.75
 Proveren lokalni maksimum dozvoljenih zamena; globalni maksimum nije potvrden.
@@ -682,9 +682,9 @@ Zajedno ocenjuje razmake i njihov Fourierov opis.
 V2 koristi amplitude, faze i njihove sprege u Fourierovom opisu, zajedno sa lokalnim razmacima. Prošle su provere Fourierove inverzije, očuvanja norme, faza i hronologije. Testiran zajednički model sa modelima koji koriste samo razmake ili samo Fourierov opis.
 
 CSV	        Sledeća kombinacija	    V2 — prosek na 64 kola	Samo razmaci	Samo Fourier	Kontrola: prethodno izvučeno kolo
-Objedinjeni	26,27,28,29,30,38,39	1,1719	                0,9219	        1,1250	        1,2188
-Loto	    1,3,4,5,10,11,39	    1,2656	                1,2188	        1,2656	        1,2969
-Loto Plus	21,22,23,24,25,36,37	1,2500	                1,3125	        1,3594	        1,2969
+Objedinjeni	26,x,28,y,30,z,39	    1,1719	                0,9219	        1,1250	        1,2188
+Loto	    1,x,4,y,10,z,39	        1,2656	                1,2188	        1,2656	        1,2969
+Loto Plus	21,x,23,y,25,z,37	    1,2500	                1,3125	        1,3594	        1,2969
 
 Zajednički opis nije pokazao doslednu prednost. Provereni su Fourierova inverzija, očuvanje norme, faze, hronologija, ponovljivost i lokalni maksimum dozvoljenih zamena.
 """
