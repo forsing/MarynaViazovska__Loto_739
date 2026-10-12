@@ -12,9 +12,9 @@ from scipy.spatial import cKDTree
 
 
 DEFAULTS = (
-    "/Users/4c/Desktop/GHQ/data/loto7_4698_k80.csv",
-    "/Users/4c/Desktop/GHQ/data/loto7_4698_k80_loto_2971.csv",
-    "/Users/4c/Desktop/GHQ/data/loto7_4698_k80_loto_plus_1727.csv",
+    "/data/loto7_4698_k80.csv",
+    "/data/loto7_4698_k80_loto_2971.csv",
+    "/data/loto7_4698_k80_loto_plus_1727.csv",
 )
 
 WINDOW, STARTS = 96, 12
@@ -680,7 +680,7 @@ if __name__ == "__main__":
 
 
 """
-Ulaz: /Users/4c/Desktop/GHQ/data/loto7_4698_k80.csv; redova=4698
+Ulaz: /data/loto7_4698_k80.csv; redova=4698
 Validacija: 16/48
 Validacija: 32/48
 Validacija: 48/48
@@ -695,7 +695,7 @@ Isti nauceni skor bez E8 organizacije: prosek=0.9531; pogodaka 0..7=[18, 33, 11,
 Kontrola: prethodno izvuceno kolo: prosek=1.2188; pogodaka 0..7=[13, 30, 16, 4, 1, 0, 0, 0]
 E8 promenio predlog u 4/64 test kola.
 Poslednji red: 4,12,18,28,35,36,37
-SLEDECI RED 4699: 1,2,3,4,5,11,13
+SLEDECI RED 4699: 1,x,3,y,5,z,13
 Skor=1.1922556044; iteracija=19; vec postoji u istoriji=False
 Zauzetih E8 oblasti=74; velicina celije=1.277239; empirijski L1 poluprecnik=2.800000
 Proveren lokalni maksimum dozvoljenih zamena; globalni maksimum nije potvrden.
@@ -703,7 +703,7 @@ E8 organizuje polazista. Njegova teorema optimalnog pakovanja ne prenosi se na L
 
 
 
-Ulaz: /Users/4c/Desktop/GHQ/data/loto7_4698_k80_loto_2971.csv; redova=2971
+Ulaz: /data/loto7_4698_k80_loto_2971.csv; redova=2971
 Validacija: 16/48
 Validacija: 32/48
 Validacija: 48/48
@@ -718,7 +718,7 @@ Isti nauceni skor bez E8 organizacije: prosek=1.2656; pogodaka 0..7=[16, 23, 18,
 Kontrola: prethodno izvuceno kolo: prosek=1.2969; pogodaka 0..7=[11, 30, 16, 7, 0, 0, 0, 0]
 E8 promenio predlog u 3/64 test kola.
 Poslednji red: 18,20,21,24,29,34,38
-SLEDECI RED 2972: 1,22,23,24,25,35,38
+SLEDECI RED 2972: 1,x,23,y,25,z,38
 Skor=1.2002168312; iteracija=16; vec postoji u istoriji=False
 Zauzetih E8 oblasti=80; velicina celije=1.290789; empirijski L1 poluprecnik=2.800000
 Proveren lokalni maksimum dozvoljenih zamena; globalni maksimum nije potvrden.
@@ -726,7 +726,7 @@ E8 organizuje polazista. Njegova teorema optimalnog pakovanja ne prenosi se na L
 
 
 
-Ulaz: /Users/4c/Desktop/GHQ/data/loto7_4698_k80_loto_plus_1727.csv; redova=1727
+Ulaz: /data/loto7_4698_k80_loto_plus_1727.csv; redova=1727
 Validacija: 16/48
 Validacija: 32/48
 Validacija: 48/48
@@ -741,7 +741,7 @@ Isti nauceni skor bez E8 organizacije: prosek=1.1719; pogodaka 0..7=[13, 31, 16,
 Kontrola: prethodno izvuceno kolo: prosek=1.2969; pogodaka 0..7=[15, 23, 18, 8, 0, 0, 0, 0]
 E8 promenio predlog u 2/64 test kola.
 Poslednji red: 4,12,18,28,35,36,37
-SLEDECI RED 1728: 1,2,13,14,15,36,37
+SLEDECI RED 1728: 1,x,13,y,15,z,37
 Skor=1.9051163527; iteracija=7; vec postoji u istoriji=False
 Zauzetih E8 oblasti=78; velicina celije=1.240989; empirijski L1 poluprecnik=3.200000
 Proveren lokalni maksimum dozvoljenih zamena; globalni maksimum nije potvrden.
@@ -776,9 +776,9 @@ E₈ centri se ne pretvaraju u Loto brojeve — iz svake izabrane oblasti uzima 
 Bez random postupka. E₈ organizuje polazišta pretrage; ne određuje raspodelu Loto brojeva.
 
 CSV	        Sledeća kombinacija	E₈ — prosek na 64 kola	Isti skor bez E₈	Kontrola: prethodno izvučeno kolo
-Objedinjeni	1,2,3,4,5,11,13	    0,9688	                0,9531	            1,2188
-Loto	    1,22,23,24,25,35,38	1,2344	                1,2656	            1,2969
-Loto Plus	1,2,13,14,15,36,37	1,1250	                1,1719	            1,2969
+Objedinjeni	1,x,3,y,5,z,13	    0,9688	                0,9531	            1,2188
+Loto	    1,x,23,y,25,z,38	1,2344	                1,2656	            1,2969
+Loto Plus	1,x,13,y,15,z,37	1,1250	                1,1719	            1,2969
 
 Ovaj test nije pokazao stabilnu korist E₈ organizacije. Proverio sam geometrijsko preslikavanje, najbliži E₈ centri, hronologija, ponovljivost i lokalni maksimum dozvoljenih zamena.
 """
